@@ -6,6 +6,7 @@ console.log("==== Prototype Practice ====");
 /* == Step 1: Base Constructor ==
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
 */
+console.log("=== Step 1: Base Constructor ===");
 function CuboidMaker(attributes){
   this.length = attributes.length;
   this.width = attributes.width;
@@ -18,7 +19,10 @@ function CuboidMaker(attributes){
   
   Formula for cuboid volume: length * width * height
 */
-
+console.log("=== Step 2: Volume Method ===");
+CuboidMaker.prototype.volume = function() {
+  return this.length * this.width * this.height;
+}
 
 /* == Step 3: Surface Area Method ==
   Create another method using CuboidMaker's prototype that returns the surface area of a given cuboid's length, width, and height. 
