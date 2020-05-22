@@ -73,6 +73,14 @@ console.log(populationTotal);
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
 
+function consume(a, b, cb){
+  return cb(a, b);
+}
+function cb(a, b){
+  return a + b;
+}
+console.log("==== Step 1: Create a higher-order function ====");
+console.log(consume(2, 10, cb));
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
