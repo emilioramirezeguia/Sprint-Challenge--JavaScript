@@ -1,4 +1,5 @@
 // ==== Closures ==== 
+console.log("==== Closures ====");
 
 /* Task 1: Study the code below and explain in your own words why nested function can access the variable internal. */
 
@@ -14,9 +15,10 @@ function myFunction() {
   };
   nestedFunction();
 }
+console.log("=== Task 1: Study the code below and explain in your own words why nested function can access the variable internal. ===");
 myFunction();
 
-// Explanation: 
+// Explanation: nestedFunction() is able to access the variable internal because of closure. It's a child function of myFunction() and it has access to variables from its parent's scope.
 
 
 /* Task 2: Counter */
