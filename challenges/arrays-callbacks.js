@@ -88,6 +88,19 @@ console.log(consume(2, 10, cb));
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
+function add(a, b){
+  return a + b;
+}
+function multiply(a, b){
+  return a * b;
+}
+function greeting(a, b){
+  return `Hello ${a} ${b}, nice to meet you!`;
+}
+console.log("==== Step 2: Create several functions to callback with consume() ====");
+console.log(add(5, 5));
+console.log(multiply(5, 5));
+console.log(greeting("Emilio", "Ramirez"));
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 // console.log(consume(2, 2, add)); // 4
