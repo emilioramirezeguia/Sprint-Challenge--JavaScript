@@ -1,4 +1,5 @@
 // ==== ADVANCED Array Methods ====
+console.log("==== Arrays and Callbacks ====");
 
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
 
@@ -26,7 +27,7 @@ zooAnimals.forEach((animal) => {
   const scientific = animal["scientific_name"];
   displayNames.push(`Name: ${name}, Scientific: ${scientific}`);
 });
-console.log("==== Request 1: .forEach() ====");
+console.log("== Request 1: .forEach() ==");
 console.log(displayNames);
 
 /* Request 2: .map()
@@ -38,7 +39,7 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 const lowCaseAnimalNames = zooAnimals.map((animal) => {
   return animal["animal_name"].toLowerCase();
 });
-console.log("==== Request 2: .map() ====");
+console.log("== Request 2: .map() ==");
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
@@ -49,7 +50,7 @@ The zoos are concerned about animals with a lower population count. Using filter
 const lowPopulationAnimals = zooAnimals.filter((animal) => {
   return animal["population"] < 5;
 });
-console.log("==== Request 3: .filter() ====");
+console.log("== Request 3: .filter() ==");
 console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
@@ -60,7 +61,7 @@ The zoos need to know their total animal population across the United States. Fi
 const populationTotal = zooAnimals.reduce((totalZooPop, zooPop) => {
   return totalZooPop + zooPop["population"];
 }, 0);
-console.log("==== Request 4: .reduce() ====");
+console.log("== Request 4: .reduce() ==");
 console.log(populationTotal);
 
 
@@ -79,7 +80,7 @@ function consume(a, b, cb){
 function cb(a, b){
   return a + b;
 }
-console.log("==== Step 1: Create a higher-order function ====");
+console.log("== Step 1: Create a higher-order function ==");
 console.log(consume(2, 10, cb));
 
 /* Step 2: Create several functions to callback with consume();
@@ -97,13 +98,13 @@ function multiply(a, b){
 function greeting(a, b){
   return `Hello ${a} ${b}, nice to meet you!`;
 }
-console.log("==== Step 2: Create several functions to callback with consume() ====");
+console.log("== Step 2: Create several functions to callback with consume() ==");
 console.log(add(5, 5));
 console.log(multiply(5, 5));
 console.log(greeting("Emilio", "Ramirez"));
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-console.log("==== Step 3: Check your work by un-commenting the following calls to consume() ====");
+console.log("== Step 3: Check your work by un-commenting the following calls to consume() ==");
 console.log(consume(2, 2, add)); // 4
 console.log(consume(10, 16, multiply)); // 160
 console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
